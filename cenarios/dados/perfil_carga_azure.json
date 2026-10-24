@@ -1,0 +1,46 @@
+[
+  {
+    "arquivo": "AzureLLMInferenceTrace_conv_1week.csv",
+    "requisicoes": 27303999,
+    "primeira_hora": "2024-05-12 00",
+    "ultima_hora": "2024-05-18 23",
+    "horas_completas": 166,
+    "fracao_entrada": 0.9392609105951079,
+    "media_tokens_contexto": 1631.579539612494,
+    "media_tokens_gerados": 105.5091875003365,
+    "fator_pico_horario": 1.6058752620328638
+  },
+  {
+    "arquivo": "AzureLLMInferenceTrace_code_1week.csv",
+    "requisicoes": 16803695,
+    "primeira_hora": "2024-05-10 00",
+    "ultima_hora": "2024-05-16 23",
+    "horas_completas": 166,
+    "fracao_entrada": 0.9910457618012043,
+    "media_tokens_contexto": 2511.27569103105,
+    "media_tokens_gerados": 22.689729967129253,
+    "fator_pico_horario": 3.1714951838496663
+  },
+  {
+    "arquivo": "AzureLLMInferenceTrace_conv.csv",
+    "requisicoes": 19366,
+    "primeira_hora": "2023-11-16 18",
+    "ultima_hora": "2023-11-16 19",
+    "horas_completas": 2,
+    "fracao_entrada": 0.8454222192481173,
+    "media_tokens_contexto": 1154.6974078281523,
+    "media_tokens_gerados": 211.12594237323142,
+    "fator_pico_horario": 1.6319263107532607
+  },
+  {
+    "arquivo": "AzureLLMInferenceTrace_code.csv",
+    "requisicoes": 8819,
+    "primeira_hora": "2023-11-16 18",
+    "ultima_hora": "2023-11-16 19",
+    "horas_completas": 2,
+    "fracao_entrada": 0.9865673688275947,
+    "media_tokens_contexto": 2047.848282118154,
+    "media_tokens_gerados": 27.88252636353328,
+    "fator_pico_horario": 1.7398733848759989
+  }
+]

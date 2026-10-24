@@ -1,0 +1,8 @@
+fonte,gpu,classe,modelo,gpus_por_replica,tps_saida,tps_total,tokens_mes_por_replica,energia_J_por_token_saida,p90_itl_ms
+TensorRT-LLM 2048/128 FP8 offline,H100 SXM,8B,Llama 3.1 8B FP8,1,3275.55,55684.4,91125519522,,
+TensorRT-LLM 2048/128 FP8 offline,H100 SXM,70B,Llama 3.3 70B FP8,2,723.4,12297.8,20124925836,,
+TensorRT-LLM 2048/128 FP8 offline,H200 SXM,8B,Llama 3.1 8B FP8,1,3390.69,57641.7,94328704427,,
+TensorRT-LLM 2048/128 FP8 offline,H200 SXM,70B,Llama 3.3 70B FP8,2,747.55,12708.3,20796776761,,
+ML.ENERGY v3 chat BF16 (p90 ITL ≤ limite),H100 (AWS p5),8B,meta-llama/Llama-3.1-8B-Instruct,1,9248.0,,,0.074,47.8
+ML.ENERGY v3 chat BF16 (p90 ITL ≤ limite),H100 (AWS p5),32B,Qwen/Qwen3-32B,2,4601.3,,,0.248,43.8
+ML.ENERGY v3 chat BF16 (p90 ITL ≤ limite),H100 (AWS p5),70B,meta-llama/Llama-3.3-70B-Instruct,4,4557.9,,,0.54,48.6

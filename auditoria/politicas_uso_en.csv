@@ -1,0 +1,11 @@
+model,document,substantive_restriction,incorporated_in_license,acceptance_mechanism,L1
+Llama-3.1-70B,Acceptable Use Policy,yes (prohibited uses),yes,yes (form/acceptance),N
+Llama-4-Maverick,Acceptable Use Policy,yes (prohibited uses; EU exclusion for multimodal),yes,yes (manual approval),N
+GAIA-4B,Gemma Prohibited Use Policy,yes,yes (Gemma Terms of Use),yes (acceptance),N
+Jurema-7B,Acceptable Use Guidelines (access form),yes,no,"yes (form: ""I agree"")",N
+Inkling,Acceptable Use Policy,yes,no LICENSE file,"yes (""you agree to be bound"")",N
+Muse-Glimmer-30B,USAGE_POLICY.md,yes (prohibited uses),no,"no (""You should not use"")",A(i)
+K-EXAONE-2.0,Model-card statement,"yes (""not allowed… violating LG AI's ethical principles"")",no,no,A(i)
+A.X-K2,"Model-card ""Out-of-Scope Use""",yes,no,no (request only),A(i)
+Apertus-70B-2509,USAGE_POLICY.md,no (indemnification; data-protection compliance),no,"yes (""By using… you agree"")",A
+gpt-oss-120b,USAGE_POLICY,no (compliance with applicable law),no,"yes (""By using… you agree"")",A

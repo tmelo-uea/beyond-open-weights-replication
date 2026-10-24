@@ -1,0 +1,4 @@
+classe,model_id,num_gpus,max_num_seqs,tps_saida,p90_itl_ms,energia_J_por_token,potencia_media_W,capacidade_tokens_mes
+8B,meta-llama/Llama-3.1-8B-Instruct,1,384,9248.0,47.8,0.074,687,249325417796
+32B,Qwen/Qwen3-32B,2,192,4601.3,43.8,0.248,1143,124050399487
+70B,meta-llama/Llama-3.3-70B-Instruct,4,192,4557.9,48.6,0.54,2461,122880387652

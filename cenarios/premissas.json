@@ -1,0 +1,271 @@
+{
+  "_descricao": "Premissas dos cenários (versão 2, 23/10/2026). Cada valor traz 'tipo': 'medido' (dado publicado, usado como está), 'calculo' (aritmética sobre dados medidos, descrita na fonte) ou 'premissa' (escolha de modelagem declarada). Nenhum valor é transferido de uma GPU para outra.",
+  "cambio_brl_por_usd": {
+    "valor": 5.0383,
+    "tipo": "medido",
+    "fonte": "PTAX venda, Banco Central do Brasil, 22/10/2026 (olinda.bcb.gov.br)"
+  },
+  "tarifa_brl_kwh": {
+    "valor": 0.78858,
+    "tipo": "medido",
+    "fonte": "MME, Informativo Tarifário do Setor Elétrico 2025 (dados ANEEL): tarifa média Brasil, classe poder público, R$ 788,58/MWh",
+    "alternativas": [
+      {
+        "rotulo": "classe comercial",
+        "valor": 0.82828,
+        "fonte": "mesma tabela: R$ 828,28/MWh"
+      }
+    ]
+  },
+  "pue": {
+    "valor": 1.65,
+    "tipo": "medido",
+    "fonte": "Uptime Institute, Global Data Center Survey 2025, regional view: média América Latina (n=72)",
+    "alternativas": [
+      {
+        "rotulo": "média global",
+        "valor": 1.54,
+        "fonte": "mesma pesquisa (n=681)"
+      }
+    ]
+  },
+  "carga": {
+    "volumes_tokens_mes": {
+      "tipo": "premissa",
+      "fonte": "Escala de referência; contratos do PNCP (verificacoes.md V4) indicam gastos de R$ 42 mil a R$ 2,6 milhões/ano",
+      "valor": {
+        "20M": 20000000.0,
+        "200M": 200000000.0,
+        "2B": 2000000000.0,
+        "20B": 20000000000.0
+      }
+    },
+    "fracao_entrada": {
+      "valor": 0.9393,
+      "tipo": "medido",
+      "fonte": "Trace Azure 2024, conversação, 1 semana (12–18/05/2024; 27.303.999 requisições; Stojkovic et al., 'DynamoLLM', HPCA 2025; licença CC-BY), calculado por traces.py → dados/perfil_carga_azure.json: 93,93% dos tokens são de contexto (média de 1.631,6 de contexto e 105,5 gerados por requisição)",
+      "alternativas": [
+        {
+          "rotulo": "código (1 semana)",
+          "valor": 0.991
+        },
+        {
+          "rotulo": "conversação 2023 (1 h)",
+          "valor": 0.8454
+        }
+      ]
+    },
+    "fator_pico": {
+      "valor": 1.6059,
+      "tipo": "medido",
+      "fonte": "Trace Azure 2024, conversação, 1 semana (12–18/05/2024; 27.303.999 requisições; Stojkovic et al., 'DynamoLLM', HPCA 2025; licença CC-BY), calculado por traces.py → dados/perfil_carga_azure.json: maior volume horário de tokens / média horária, em 166 horas completas",
+      "alternativas": [
+        {
+          "rotulo": "código (1 semana)",
+          "valor": 3.1715
+        }
+      ]
+    }
+  },
+  "apis": {
+    "tipo": "medido",
+    "fonte_geral": "Páginas oficiais de preço, acesso em 22/10/2026; USD por milhão de tokens, nível padrão",
+    "lista": [
+      {
+        "nome": "Claude Haiku 5.5",
+        "classes": [
+          "8B"
+        ],
+        "entrada": 0.1,
+        "saida": 0.5,
+        "fonte": "https://claude.com/pricing (contexto ≤100K)"
+      },
+      {
+        "nome": "Gemini 3.5 Flash-Lite",
+        "classes": [
+          "8B"
+        ],
+        "entrada": 0.3,
+        "saida": 2.5,
+        "fonte": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      {
+        "nome": "GPT-5.4-mini",
+        "classes": [
+          "8B"
+        ],
+        "entrada": 0.75,
+        "saida": 4.5,
+        "fonte": "https://developers.openai.com/api/docs/pricing"
+      },
+      {
+        "nome": "Gemini 3.1 Pro",
+        "classes": [
+          "70B"
+        ],
+        "entrada": 2.0,
+        "saida": 12.0,
+        "fonte": "https://ai.google.dev/gemini-api/docs/pricing (≤200K)"
+      },
+      {
+        "nome": "Claude Sonnet 5.5",
+        "classes": [
+          "70B"
+        ],
+        "entrada": 2.0,
+        "saida": 10.0,
+        "fonte": "https://claude.com/pricing"
+      },
+      {
+        "nome": "GPT-6.1-sol",
+        "classes": [
+          "70B"
+        ],
+        "entrada": 2.0,
+        "saida": 10.0,
+        "fonte": "https://developers.openai.com/api/docs/pricing"
+      },
+      {
+        "nome": "Llama 3.3 70B Turbo via DeepInfra (pesos abertos, exterior)",
+        "classes": [
+          "70B"
+        ],
+        "entrada": 0.1,
+        "saida": 0.32,
+        "fonte": "https://deepinfra.com/pricing"
+      },
+      {
+        "nome": "Llama 3.3 70B via Together (pesos abertos, exterior)",
+        "classes": [
+          "70B"
+        ],
+        "entrada": 1.04,
+        "saida": 1.04,
+        "fonte": "https://www.together.ai/pricing"
+      }
+    ]
+  },
+  "nuvem_h100": {
+    "tipo": "medido",
+    "fonte_geral": "AWS EC2 on-demand, p5 (H100 80 GB), arquivos de preço publicados em 15/10/2026; mesma família de instância usada nas medições do ML.ENERGY",
+    "lista": [
+      {
+        "regiao": "AWS sa-east-1 (São Paulo)",
+        "usd_hora_por_gpu": 11.56,
+        "fonte": "p5.48xlarge US$ 92,47/h ÷ 8 GPUs; p5.4xlarge (1×H100) US$ 11,56/h"
+      },
+      {
+        "regiao": "AWS us-east-1",
+        "usd_hora_por_gpu": 6.88,
+        "fonte": "p5.48xlarge US$ 55,04/h ÷ 8; p5.4xlarge US$ 6,88/h"
+      }
+    ]
+  },
+  "servidores_proprios": {
+    "tipo": "medido",
+    "fonte_geral": "Contratações públicas no PNCP (verificacoes.md V5 e V8); vida útil = prazo de garantia exigido (premissa declarada)",
+    "potencia_gpu_w": {
+      "valor": 600,
+      "tipo": "medido",
+      "fonte": "NVIDIA H200 NVL: 'up to 600 W' (nvidia.com/en-us/data-center/h200). Usado como limite superior de consumo; CPU e demais componentes do servidor não incluídos"
+    },
+    "lista": [
+      {
+        "nome": "TJPI: servidor 4× H200 NVL",
+        "preco_brl": 1800000.0,
+        "gpus": 4,
+        "garantia_meses": 36,
+        "fonte": "PE 90037/2025-TJPI, item 1, valor unitário homologado em 27/11/2025 (Lanlink)"
+      },
+      {
+        "nome": "TJMS: Dell XE7740 4× H200 NVL",
+        "preco_brl": 2118999.96,
+        "gpus": 4,
+        "garantia_meses": 60,
+        "fonte": "Contrato TJMS 01.043/2026, lote 01, item 01 (Click TI)"
+      }
+    ]
+  },
+  "aluguel_nacional": {
+    "tipo": "medido",
+    "lista": [
+      {
+        "nome": "ALBA: servidor dedicado com GPU ≥24 GB, data center no Brasil",
+        "brl_mes": 5225.0,
+        "fonte": "Contrato ALBA/Dimenoc (HostDime), dispensa 006/2026; modelo da GPU não especificado no TR",
+        "classes": [
+          "8B"
+        ],
+        "nota_classes": "TR exige no mínimo 24 GB de VRAM; um modelo de 70B tem ~70 GB de pesos em FP8 (1 byte/parâmetro) e não cabe; 8B em FP8 ocupa ~8 GB"
+      }
+    ]
+  },
+  "capacidade_medida": {
+    "tipo": "medido",
+    "fonte": "NVIDIA TensorRT-LLM perf-overview (atualizado em 15/09/2025; https://nvidia.github.io/TensorRT-LLM/performance/perf-overview.html): 'Total Output Throughput (tokens/sec)', modo offline com taxa de requisição infinita, FP8, ISL/OSL 2048/128 (proporção 16:1, próxima da do trace Azure de conversação, 15,5:1). Throughput máximo sem restrição de latência: a capacidade é otimista e o custo do cenário B, um limite inferior",
+    "isl": 2048,
+    "osl": 128,
+    "h100_sxm": {
+      "8B": {
+        "modelo": "Llama 3.1 8B FP8",
+        "gpus_por_replica": 1,
+        "tps_saida": 3275.55
+      },
+      "70B": {
+        "modelo": "Llama 3.3 70B FP8",
+        "gpus_por_replica": 2,
+        "tps_saida": 723.4
+      }
+    },
+    "h200_sxm": {
+      "8B": {
+        "modelo": "Llama 3.1 8B FP8",
+        "gpus_por_replica": 1,
+        "tps_saida": 3390.69
+      },
+      "70B": {
+        "modelo": "Llama 3.3 70B FP8",
+        "gpus_por_replica": 2,
+        "tps_saida": 747.55
+      }
+    },
+    "_nota": "H100 SXM 80 GB (DGX H100) é a GPU das instâncias AWS p5 do cenário B. H200 SXM 141 GB não é a H200 NVL dos contratos do TJPI e do TJMS: serve só de referência no equilíbrio do cenário C-ii. Classe 32B: sem medição nesse formato, excluída."
+  },
+  "referencia_energia_ml_energy": {
+    "tipo": "medido",
+    "arquivo": "dados/mlenergy_v3_lm-arena-chat.json",
+    "fonte": "ML.ENERGY Leaderboard v3 (Chung et al., arXiv 2505.06371; blog de 29/01/2026): H100 80 GB em AWS p5.48xlarge, vLLM 0.11.1, BF16, tarefa de chat (LM Arena), energia de GPU medida com Zeus",
+    "criterio_lote": {
+      "p90_itl_max_ms": 50,
+      "tipo": "premissa",
+      "fonte": "Nível de serviço declarado: maior throughput medido com p90 da latência entre tokens ≤ 50 ms (≥ 20 tokens/s por usuário em 90% dos casos)"
+    },
+    "classes": {
+      "8B": {
+        "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+        "num_gpus": 1
+      },
+      "32B": {
+        "model_id": "Qwen/Qwen3-32B",
+        "num_gpus": 2
+      },
+      "70B": {
+        "model_id": "meta-llama/Llama-3.3-70B-Instruct",
+        "num_gpus": 4
+      }
+    },
+    "uso": "Somente referência de energia por token e de throughput com limite de latência (prompts de chat curtos); não usado para capacidade"
+  },
+  "infra_completa_tjms": {
+    "tipo": "contratado",
+    "valor_total_brl": 9557645.58,
+    "servidores": 2,
+    "meses": 60,
+    "fonte": "PNCP, contrato TJMS nº 01.043/2026 (Click TI/Dell): 2 servidores XE7740 com 4× H200 NVL cada, switches front-end e back-end, storage PowerScale F210, instalação e implantação e demais itens do contrato; valor total R$ 9.557.645,58; vigência de 60 meses (verificacoes.md V4–V5)"
+  },
+  "custo_capital": {
+    "tipo": "medido",
+    "selic_aa": 13.75,
+    "fonte": "Banco Central do Brasil, SGS série 432 (meta Selic), 22/10/2026: 13,75% a.a.; usada como custo de oportunidade do capital na anuidade do investimento (variante)"
+  }
+}

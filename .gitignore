@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.DS_Store
+# third-party data not redistributed (see README)
+cenarios/dados/mlenergy_v3_lm-arena-chat.json

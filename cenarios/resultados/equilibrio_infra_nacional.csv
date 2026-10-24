@@ -1,0 +1,20 @@
+cenario,infraestrutura,custo_fixo_brl_mes,kwh_mes_limite_superior,classe,api,tps_total_equilibrio,tokens_mes_equilibrio,ref_4xH100SXM_tps_total_medido,ref_4xH200SXM_tps_total_medido
+C-ii,TJPI: servidor 4× H200 NVL,52279.63,2890.8,8B,Claude Haiku 5.5,51020.0,83492451465,222737,230567
+C-ii,TJPI: servidor 4× H200 NVL,52279.63,2890.8,8B,Gemini 3.5 Flash-Lite,14625.6,23934220298,222737,230567
+C-ii,TJPI: servidor 4× H200 NVL,52279.63,2890.8,8B,GPT-5.4-mini,6485.9,10613928519,222737,230567
+C-ii,TJPI: servidor 4× H200 NVL,52279.63,2890.8,70B,Gemini 3.1 Pro,2432.2,3980223195,24596,25417
+C-ii,TJPI: servidor 4× H200 NVL,52279.63,2890.8,70B,Claude Sonnet 5.5,2551.0,4174622573,24596,25417
+C-ii,TJPI: servidor 4× H200 NVL,52279.63,2890.8,70B,GPT-6.1-sol,2551.0,4174622573,24596,25417
+C-ii,TJPI: servidor 4× H200 NVL,52279.63,2890.8,70B,"Llama 3.3 70B Turbo via DeepInfra (pesos abertos, exterior)",55937.7,91540147397,24596,25417
+C-ii,TJPI: servidor 4× H200 NVL,52279.63,2890.8,70B,"Llama 3.3 70B via Together (pesos abertos, exterior)",6096.9,9977347950,24596,25417
+C-ii,TJMS: Dell XE7740 4× H200 NVL,37596.29,2890.8,8B,Claude Haiku 5.5,36690.4,60042637069,222737,230567
+C-ii,TJMS: Dell XE7740 4× H200 NVL,37596.29,2890.8,8B,Gemini 3.5 Flash-Lite,10517.8,17212019502,222737,230567
+C-ii,TJMS: Dell XE7740 4× H200 NVL,37596.29,2890.8,8B,GPT-5.4-mini,4664.3,7632884731,222737,230567
+C-ii,TJMS: Dell XE7740 4× H200 NVL,37596.29,2890.8,70B,Gemini 3.1 Pro,1749.1,2862331774,24596,25417
+C-ii,TJMS: Dell XE7740 4× H200 NVL,37596.29,2890.8,70B,Claude Sonnet 5.5,1834.5,3002131853,24596,25417
+C-ii,TJMS: Dell XE7740 4× H200 NVL,37596.29,2890.8,70B,GPT-6.1-sol,1834.5,3002131853,24596,25417
+C-ii,TJMS: Dell XE7740 4× H200 NVL,37596.29,2890.8,70B,"Llama 3.3 70B Turbo via DeepInfra (pesos abertos, exterior)",40227.0,65830045124,24596,25417
+C-ii,TJMS: Dell XE7740 4× H200 NVL,37596.29,2890.8,70B,"Llama 3.3 70B via Together (pesos abertos, exterior)",4384.5,7175095130,24596,25417
+C-i,"ALBA: servidor dedicado com GPU ≥24 GB, data center no Brasil",5225.0,,8B,Claude Haiku 5.5,5099.1,8344513597,,
+C-i,"ALBA: servidor dedicado com GPU ≥24 GB, data center no Brasil",5225.0,,8B,Gemini 3.5 Flash-Lite,1461.7,2392065668,,
+C-i,"ALBA: servidor dedicado com GPU ≥24 GB, data center no Brasil",5225.0,,8B,GPT-5.4-mini,648.2,1060791356,,

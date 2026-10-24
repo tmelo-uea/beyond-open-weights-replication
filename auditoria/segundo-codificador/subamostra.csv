@@ -1,0 +1,11 @@
+grupo,modelo
+global,K-EXAONE-2.0
+global,Ling-1T
+global,Solar-Open2-250B
+global,gpt-oss-120b
+lusofono_latam,Gervasio-8B-PTPT
+lusofono_latam,LatamGPT-70B
+lusofono_latam,Soberano-1
+lusofono_latam,Tucano2-qwen-3.7B
+referencia_continuidade,Apertus-70B-2509
+referencia_continuidade,Muse-Glimmer-30B

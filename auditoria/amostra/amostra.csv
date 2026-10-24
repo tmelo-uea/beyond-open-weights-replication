@@ -1,0 +1,58 @@
+estrato,modelo,organizacao,pais,data,acessibilidade_epoch,link
+1,Qwen3.8-2.4T-A95B,Alibaba,China,2026-08-08,Open weights (restricted use),https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B
+1,Olmo 3,Allen Institute for AI,United States of America,2025-11-20,Open weights (unrestricted),https://arxiv.org/abs/2512.13961
+1,Ling-1T,Ant Group,China,2025-10-10,Open weights (unrestricted),"https://huggingface.co/inclusionAI/Ling-1T
+https://arxiv.org/pdf/2510.22115"
+1,ERNIE-4.5-VL-424B-A47B (文心大模型4.5),Baidu,China,2025-03-16,Open weights (unrestricted),"https://www.datacamp.com/blog/ernie-4-5-x1
+
+https://yiyan.baidu.com/blog/publication/ERNIE_Technical_Report.pdf"
+1,DeepSeek V4.1 Flash,DeepSeek,China,2026-09-09,Open weights (unrestricted),"https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf 
+
+https://www.deepseek.com/en/news/deepseek-v4-1-flash/"
+1,K-EXAONE 2.0,LG AI Research,South Korea,2026-07-31,Open weights (unrestricted),"https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B
+https://github.com/LG-AI-EXAONE/K-EXAONE-2.0
+https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B/blob/main/assets/K-EXAONE-2.0-Technical-Report.pdf"
+1,LongCat-2.0,Meituan Inc,China,2026-06-29,Open weights (unrestricted),https://longcat.chat/blog/longcat-2.0/
+1,Llama 4 Maverick,Meta AI,United States of America,2025-04-05,Open weights (restricted use),https://ai.meta.com/blog/llama-4-multimodal-intelligence/
+1,MiniMax-M3,MiniMax,China,2026-06-01,Open weights (restricted use),https://www.minimax.io/blog/minimax-m3
+1,Kimi K3,Moonshot,China,2026-07-16,Open weights (non-commercial),https://huggingface.co/moonshotai/Kimi-K3
+1,Motif-3,Motif Technologies,South Korea,2026-08-07,Open weights (unrestricted),"https://huggingface.co/Motif-Technologies/Motif-3
+https://huggingface.co/Motif-Technologies/Motif-3/blob/main/motif_3_technical_report.pdf
+https://github.com/MotifTechnologies/motif3-training-example"
+1,HyperCLOVA X SEED 32B Think,NAVER,South Korea,2025-12-29,Open weights (unrestricted),https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Think-32B
+1,VAETKI,NC AI,South Korea,2025-12-30,Open weights (unrestricted),https://huggingface.co/NC-AI-consortium-VAETKI/VAETKI
+1,Nemotron 3 Ultra,Nvidia,United States of America,2026-06-04,Open weights (unrestricted),"https://arxiv.org/abs/2512.20856
+https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Ultra-Technical-Report.pdf "
+1,gpt-oss-120b,OpenAI,United States of America,2025-08-05,Open weights (unrestricted),https://cdn.openai.com/pdf/419b6906-9da6-406c-a19d-1bb078ac7637/oai_gpt-oss_model_card.pdf
+1,A.X K2,SK Telecom,South Korea,2026-07-29,Open weights (unrestricted),"https://huggingface.co/skt/A.X-K2
+https://github.com/SKT-AI/A.X-K2/blob/main/A_X_K2_Tech_Report.pdf"
+1,Tencent Hy4 preview,Tencent,China,2026-08-28,Open weights (unrestricted),https://hy.tencent.com/hy4-preview
+1,Inkling,Thinking Machines,United States of America,2026-07-15,Open weights (unrestricted),https://thinkingmachines.ai/news/introducing-inkling/
+1,Solar Open2 250B,Upstage,South Korea,2026-06-28,Open weights (unrestricted),https://huggingface.co/upstage/Solar-Open2-250B
+1,MiMo-V2.5-Pro,Xiaomi Corp,China,2026-04-23,Open weights (unrestricted),https://mimo.xiaomi.com/mimo-v2-5-pro/
+1,GLM-5.3-Flash,Z.ai (Zhipu AI),China,2026-08-20,Open weights (unrestricted),https://z.ai/blog/glm-5.3-flash
+2,Tucano2-0.6B-Base,,,,,
+2,Tucano2-qwen-3.7B,,,,,
+2,GAIA-4B,,,,,
+2,Jurema-7B,,,,,
+2,Soberano-1,,,,,
+2,Sabia-4,,,,,
+2,Sabia-7B,,,,,
+2,Curio-1.1b,,,,,
+2,Manaca-1B,,,,,
+2,Amazonia IA (WideLabs),,,,,
+2,LatamGPT-70B,,,,,
+2,AMALIA-9B,,,,,
+2,Gervasio-8B-PTPT,,,,,
+3,Pythia-12B,,,,,
+3,Olmo-3-32B-Think,,,,,
+3,Apertus-70B-2509,,,,,
+3,SmolLM3-3B,,,,,
+3,BLOOM-176B,,,,,
+continuidade,Llama-3.1-70B,,,,,
+continuidade,Mixtral-8x22B,,,,,
+continuidade,Mistral-Large-3-675B,,,,,
+continuidade,DeepSeek-R1,,,,,
+continuidade,Muse-Glimmer-30B,,,,,
+continuidade,OpenEuroLLM-Prelude-9B,,,,,
+continuidade,Fronteira proprietaria (GPT/Claude/Gemini),,,,,

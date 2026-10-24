@@ -1,0 +1,11 @@
+modelo,documento,restricao_substantiva,incorporado_na_licenca,mecanismo_de_aceite,linguagem,fonte,L1_resultante
+Llama-3.1-70B,Acceptable Use Policy,sim (usos proibidos),sim (a licença incorpora a AUP),sim (formulário/aceite),obrigatória,Llama 3.1 Community License §1(b)(iv); huggingface.co/meta-llama,N
+Llama-4-Maverick,Acceptable Use Policy,sim (usos proibidos; exclusão da UE para multimodal),sim,sim (aprovação manual),obrigatória,Llama 4 Community License; huggingface.co/meta-llama,N
+GAIA-4B,Gemma Prohibited Use Policy,sim,sim (Gemma Terms of Use),sim (aceite no HF),obrigatória,ai.google.dev/gemma/terms,N
+Jurema-7B,Acceptable Use Guidelines (formulário),"sim ('not to use… to deceive, manipulate, discriminate')",não,sim (formulário com 'I agree'),obrigatória,huggingface.co/Jurema-br (formulário de acesso),N
+Inkling,Acceptable Use Policy,sim,não (sem LICENSE),"sim ('By accessing, downloading, or using… you agree to be bound')",obrigatória,thinkingmachines.ai; huggingface.co/thinkingmachines,N
+Muse-Glimmer-30B,USAGE_POLICY.md,sim (lista de usos proibidos),não (LICENSE Apache-2.0 sem referência),não,'You should not use'; 'applies to your access or use',"huggingface.co/meta-models/Muse-Glimmer-30B (USAGE_POLICY.md, README)",A(i)
+K-EXAONE-2.0,Declaração no model card,sim ('not allowed to engage in any malicious activities… violating LG AI's ethical principles'),não (LICENSE Apache-2.0),não,'are not allowed',"huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B (README, seção Limitation)",A(i)
+Apertus-70B-2509,USAGE_POLICY.md,não (indenização da ETH/EPFL e conformidade com proteção de dados),não,sim ('By using the Apertus LLM you agree'),obrigatória,huggingface.co/swiss-ai/Apertus-70B-2509 (USAGE_POLICY.md),A
+gpt-oss-120b,USAGE_POLICY,não ('comply with all applicable law'),não,sim ('By using… you agree'),obrigatória,huggingface.co/openai/gpt-oss-120b (USAGE_POLICY),A
+A.X-K2,'Out-of-Scope Use' no model card,sim (usos fora de escopo),não,não,pedido ('we ask'),huggingface.co/skt/A.X-K2 (README),A(i)
