@@ -6,9 +6,9 @@ This package reproduces the openness audit (45 models), the deployment-cost mode
 supplementary tables. Data were collected on 22–23 October 2026. Working notes and evidence files are in
 Portuguese; the coded data, the justifications (`auditoria/notas_en.csv`), and the supplementary material are in English.
 
-References of the form "V1"–"V15" or "verificacoes.md" in code comments and notes point to the authors' internal
+References of the form "V1"–"V18" or "verificacoes.md" in code comments and notes point to the authors' internal
 verification log. Every fact used in a code or input is transcribed, with its primary source, in `auditoria/evidencias/`
-or in the `fonte` fields of `cenarios/premissas.json`. *Anonymized version for peer review. Persistent identifier and license will be added after review.*
+or in the `fonte` fields of `cenarios/premissas.json`.
 
 ## Contents
 
