@@ -1,0 +1,72 @@
+{
+  "upload_type": "dataset",
+  "title": "Replication package for \"Beyond Open Weights: Technical, Economic, and Governance Conditions for Sovereign AI in Brazil\"",
+  "creators": [
+    {
+      "name": "de Melo, Tiago",
+      "affiliation": "Universidade do Estado do Amazonas (UEA), Manaus, Brazil",
+      "orcid": "0000-0002-3158-2299"
+    }
+  ],
+  "description": "<p>Data, code, and evidence for the article \"Beyond Open Weights: Technical, Economic, and Governance Conditions for Sovereign AI in Brazil\" (submitted to IEEE Transactions on Technology and Society). The package reproduces the article's three empirical analyses and its figures and supplementary tables.</p><ul><li><strong>Openness audit (45 large language models).</strong> A 13-criterion rubric derived from the Open Source AI Definition 1.0 and the Model Openness Framework; per-model evidence with sources, quotations, and access dates; an explicit inheritance rule for derived models; the coded matrix with OSAID verdicts and MOF-compatible classes; a binding test for use policies; and an independent second coding of a stratified subsample (Cohen's kappa = 0.82 before adjudication), with pre-adjudication matrices of both coders.</li><li><strong>Cost model.</strong> Every input labeled as measured or contracted, with its source (Azure LLM inference traces, NVIDIA TensorRT-LLM throughput, API list prices, Brazilian public contracts, electricity tariffs, Selic rate); scripts for the base case, one-at-a-time sensitivity, and the full factorial analysis over all measured alternatives (2,880 combinations).</li><li><strong>Procurement screening.</strong> Raw results of eight queries to the Brazilian National Public Procurement Portal (PNCP), the screening script with its written rule, and the screening table of 260 contracts with their original object texts in Portuguese.</li><li><strong>Source integrity.</strong> SHA-256 hashes of local copies of all primary sources (copies not redistributed) and commit hashes of the Hugging Face repositories coded.</li></ul><p>Data were collected on 22-24 October 2026. Working notes and evidence files are in Portuguese; coded data, English justifications, and supplementary tables are in English. See README.md for the contents and the commands that reproduce each result.</p><p><strong>Licenses.</strong> Code (*.py) under the MIT License (LICENSE). Data and documentation under CC BY 4.0 (LICENSE-DATA.md). Third-party material keeps its own terms: the Epoch AI \"Notable AI models\" snapshot and the profile derived from the Azure LLM inference traces are CC BY 4.0; PNCP records are public records of the Brazilian government.</p>",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "version": "1.0.0",
+  "keywords": [
+    "open source AI",
+    "Open Source AI Definition",
+    "Model Openness Framework",
+    "large language models",
+    "open-weight models",
+    "digital sovereignty",
+    "technological sovereignty",
+    "public procurement",
+    "AI governance",
+    "inference cost",
+    "Brazil",
+    "Portuguese language models",
+    "Latin America"
+  ],
+  "dates": [
+    {
+      "type": "Collected",
+      "start": "2026-10-22",
+      "end": "2026-10-24",
+      "description": "Coding of the openness audit, price and contract collection, and PNCP queries"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "relation": "references",
+      "identifier": "10.5753/latinoware.2025.14977",
+      "resource_type": "publication-conferencepaper"
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "https://epoch.ai/data/ai-models",
+      "resource_type": "dataset"
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "https://github.com/Azure/AzurePublicDataset",
+      "resource_type": "dataset"
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "https://pncp.gov.br",
+      "resource_type": "dataset"
+    },
+    {
+      "relation": "references",
+      "identifier": "https://opensource.org/ai/open-source-ai-definition",
+      "resource_type": "other"
+    },
+    {
+      "relation": "references",
+      "identifier": "arXiv:2403.13784",
+      "resource_type": "publication-preprint"
+    }
+  ],
+  "notes": "Archived version of the replication package for the associated article, submitted to IEEE Transactions on Technology and Society. After publication, a new version will add the article's DOI as an isSupplementTo relation."
+}

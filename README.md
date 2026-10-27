@@ -1,6 +1,7 @@
 # Replication package — "Beyond Open Weights: Technical, Economic, and Governance Conditions for Sovereign AI in Brazil"
 
-*Anonymized version for peer review. Persistent identifier and license will be added after review.*
+Author: Tiago de Melo, Universidade do Estado do Amazonas (UEA), Manaus, Brazil (ORCID: https://orcid.org/0000-0002-3158-2299).
+Archived on Zenodo; the DOI of each release is listed on the Zenodo record.
 
 This package reproduces the openness audit (45 models), the deployment-cost model, the figures, and the
 supplementary tables. Data were collected on 22–23 October 2026. Working notes and evidence files are in
