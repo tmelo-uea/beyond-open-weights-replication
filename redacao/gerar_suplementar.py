@@ -194,7 +194,7 @@ def montar():
     # S8. Confiabilidade (lê o relatório pré-adjudicação gerado por concordancia.py)
     rel = (RAIZ / "auditoria/segundo-codificador/concordancia-pre-adjudicacao.md").read_text(encoding="utf-8")
     secoes.append(("h2", "S8. Inter-coder reliability"))
-    secoes.append(("p", "A stratified random subsample of 10 models (seed 20261023; four from Stratum 1, four from Stratum 2, "
+    secoes.append(("p", "LLM-based second coder. A stratified random subsample of 10 models (seed 20261023; four from Stratum 1, four from Stratum 2, "
                         "two from the reference and continuity strata; 130 cells excluding the descriptive S2) was coded by an "
                         "LLM-based agent (OpenAI Codex) from written instructions and primary sources only, without access to "
                         "the original codes. The adjudicator (the author) knew which codes were original. Pre-adjudication codes "
@@ -216,6 +216,31 @@ def montar():
                         "binding test to the full sample also changed Muse Glimmer L1 from N to A(i), a cell on which both coders "
                         "had agreed. The second coder's evidence entries were generic paraphrases rather than the requested "
                         "verbatim quotations; every disagreeing cell was therefore verified against primary sources by the adjudicator."))
+    # S8 (cont.). Segundo codificador humano (auditoria/segundo-codificador-humano/)
+    hdir = RAIZ / "auditoria/segundo-codificador-humano"
+    relh = (hdir / "concordancia-pre-adjudicacao.md").read_text(encoding="utf-8")
+    secoes.append(("p", "Human second coder. A human coder not involved in the original coding independently coded the same "
+                        "subsample on 26 Nov. 2026 from the same instructions and blank sheet, without access to the original codes, "
+                        "the paper, or the replication package. Statistics before adjudication (same bootstrap):"))
+    for chave in ("Concordância observada", "Kappa de Cohen", "AC1 de Gwet"):
+        linha = next(l for l in relh.splitlines() if l.startswith(chave))
+        trad = linha.replace("Concordância observada", "Observed agreement").replace("Kappa de Cohen (A/N/ND)", "Cohen's kappa (A/N/ND)") \
+                    .replace("AC1 de Gwet", "Gwet's AC1").replace("IC 95% bootstrap", "95% CI").replace("IC 95%", "95% CI")
+        secoes.append(("p", trad))
+    confh = [l for l in relh.splitlines() if l.startswith("| A |") or l.startswith("| N |") or l.startswith("| ND |") or l.startswith("| Total |")]
+    secoes.append(("tcap", "TABLE S8b. Confusion matrix before adjudication, human second coder (rows: original coder; columns: second coder)"))
+    secoes.append(("t", ["", "A", "N", "ND", "Total"], [[c.strip() for c in l.strip("|").split("|")] for l in confh], [0.8, 0.8, 0.8, 0.8, 0.8]))
+    secoes.append(("p", "All 14 disagreements fall in cells the human coder marked as interpretation-dependent; agreement is complete on "
+                        "the other 66 cells. Five disagreements concern Soberano-1, whose repository was gated on 24 Oct. 2026 and returned "
+                        "an authentication error to unauthenticated requests on 26 Nov. 2026; excluding it, agreement is 92.3%, kappa 0.846, "
+                        "AC1 0.897 (117 cells). The human and LLM-based coders agree at kappa 0.850. The nine other disagreements were "
+                        "adjudicated against primary sources by an AI assistant, not blind to the origin of the codes, and reviewed by the "
+                        "author (Table S8c); one original code changed (Gervásio-8B-PTPT R1, A(i) to N(i))."))
+    adj = [r for r in csv.DictReader(open(hdir / "adjudicacao.csv", encoding="utf-8")) if r["prevaleceu"] != "excluído"]
+    secoes.append(("tcap", "TABLE S8c. Adjudication of disagreements with the human second coder (Soberano-1 excluded)"))
+    secoes.append(("t", ["Model", "Criterion", "Original", "Human coder", "Decision", "Justification"],
+                   [[NOME.get(r["modelo"], r["modelo"]), r["criterio"], r["autor_pre"], r["anotador2"], r["decisao"], r["justificativa"]] for r in adj],
+                   [1.4, 0.6, 0.6, 0.7, 0.6, 3.6]))
     # S9. Compras públicas
     tri = list(csv.DictReader(open(RAIZ / "compras/triagem_pncp.csv", encoding="utf-8")))
     rot = {"BRK": "Brokerage of commercial clouds for AI", "API": "Direct foreign cloud credits for AI",

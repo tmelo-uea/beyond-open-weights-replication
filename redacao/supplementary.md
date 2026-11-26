@@ -215,7 +215,7 @@ A use-related document makes L1 = N only if (a) it imposes a substantive restric
 
 ## S8. Inter-coder reliability
 
-A stratified random subsample of 10 models (seed 20261023; four from Stratum 1, four from Stratum 2, two from the reference and continuity strata; 130 cells excluding the descriptive S2) was coded by an LLM-based agent (OpenAI Codex) from written instructions and primary sources only, without access to the original codes. The adjudicator (the author) knew which codes were original. Pre-adjudication codes of both coders are in the replication package. Statistics before adjudication, with 95% bootstrap intervals over cells (2,000 resamples):
+LLM-based second coder. A stratified random subsample of 10 models (seed 20261023; four from Stratum 1, four from Stratum 2, two from the reference and continuity strata; 130 cells excluding the descriptive S2) was coded by an LLM-based agent (OpenAI Codex) from written instructions and primary sources only, without access to the original codes. The adjudicator (the author) knew which codes were original. Pre-adjudication codes of both coders are in the replication package. Statistics before adjudication, with 95% bootstrap intervals over cells (2,000 resamples):
 
 Observed agreement: 90.8% (95% CI: 85.4%–95.4%)
 
@@ -233,6 +233,39 @@ Gwet's AC1: 0.875 (95% CI: 0.806–0.938)
 | Total | 61 | 67 | 2 | 130 |
 
 Category-specific agreement: A: 92.1%; N: 90.6%; ND: 66.7%. The OSAID verdict (including L2) matched for 9 of 10 models. Of the 12 disagreements, adjudication against primary sources corrected 3 original codes (gpt-oss-120b R2; Soberano-1 D2 and D3), marked 1 as interpretation-dependent (K-EXAONE 2.0 L1), and retained 8 (two of them, Apertus and gpt-oss-120b L1, resolved by the binding test of S7). Applying the binding test to the full sample also changed Muse Glimmer L1 from N to A(i), a cell on which both coders had agreed. The second coder's evidence entries were generic paraphrases rather than the requested verbatim quotations; every disagreeing cell was therefore verified against primary sources by the adjudicator.
+
+Human second coder. A human coder not involved in the original coding independently coded the same subsample on 26 Nov. 2026 from the same instructions and blank sheet, without access to the original codes, the paper, or the replication package. Statistics before adjudication (same bootstrap):
+
+Observed agreement: 89.2% (95% CI: 83.8%–93.8%)
+
+Cohen's kappa (A/N/ND): 0.794 (95% CI: 0.688–0.884)
+
+Gwet's AC1: 0.854 (95% CI: 0.779–0.918)
+
+**TABLE S8b. Confusion matrix before adjudication, human second coder (rows: original coder; columns: second coder)**
+
+|  | A | N | ND | Total |
+|---|---|---|---|---|
+| A | 56 | 9 | 0 | 65 |
+| N | 3 | 58 | 0 | 61 |
+| ND | 0 | 2 | 2 | 4 |
+| Total | 59 | 69 | 2 | 130 |
+
+All 14 disagreements fall in cells the human coder marked as interpretation-dependent; agreement is complete on the other 66 cells. Five disagreements concern Soberano-1, whose repository was gated on 24 Oct. 2026 and returned an authentication error to unauthenticated requests on 26 Nov. 2026; excluding it, agreement is 92.3%, kappa 0.846, AC1 0.897 (117 cells). The human and LLM-based coders agree at kappa 0.850. The nine other disagreements were adjudicated against primary sources by an AI assistant, not blind to the origin of the codes, and reviewed by the author (Table S8c); one original code changed (Gervásio-8B-PTPT R1, A(i) to N(i)).
+
+**TABLE S8c. Adjudication of disagreements with the human second coder (Soberano-1 excluded)**
+
+| Model | Criterion | Original | Human coder | Decision | Justification |
+|---|---|---|---|---|---|
+| Ling-1T | D3 | A | N | A(i) | Card links a "Training-content summary (PDF)" that it says identifies Ling-1T; file Ling-2.0_TDS-Summary.pdf exists in inclusionAI/AI-Transparency. D3 asks for publication of a data-documentation document. |
+| Ling-1T | C1 | N | A | N(i) | Ling-V2 (MIT) provides a "Pretraining demo" for continued pretraining, FP8 tooling and Megatron SFT, not the code used to train Ling-1T. |
+| Solar-Open2-250B | R2 | N | A | N | Card reports results on third-party public benchmarks (GPQA, AIME) without producer-released evaluation code or data; naming public benchmarks is not a reproducibility package. |
+| gpt-oss-120b | R2 | N | A | A | gpt_oss/evals publishes runnable evaluation code (AIME, GPQA, HealthBench); already corrected to A after the first (LLM) check. |
+| Gervásio-8B-PTPT | R1 | A | N | N(i) | The only paper (arXiv 2402.18766) describes the earlier Gervásio PT* release on Llama 2, not this Llama-3.1-8B version; the rubric asks for a report about this model version. |
+| LatamGPT-70B | R1 | A | N | A | Technical report (latamgpt.org/downloads/latamgpt-report.pdf, Jun. 2026) archived on 23 Oct. 2026 with SHA-256 4122ede9…; not linked from the HF card, which the second coder used. |
+| LatamGPT-70B | R2 | A | N | A(i) | Results in the technical report plus published benchmarks CHOCLO (MIT) and Trueque (Apache-2.0) and an lm-evaluation-harness fork; data needed to reproduce a subset are public. |
+| Apertus-70B-2509 | L1 | A | N | A | USAGE_POLICY.md (binding, "By using... you agree") requires only indemnification and data-protection compliance; under the binding test these are not use restrictions. |
+| Muse-Glimmer-30B | R2 | A | N | A(i) | .eval_results/mmi.yaml reports results on facebook/mmi, a published dataset, plus a methodology report; data to reproduce a subset are public. |
 
 ## S9. Procurement screening
 

@@ -73,6 +73,10 @@ Epoch AI data are used under CC BY 4.0. Azure traces are used under CC BY 4.0.
 
 ## Changes
 
+### 1.1.1 (November 2026)
+
+- Supplementary Table S8 extended with the human second coder (Tables S8b and S8c).
+
 ### 1.1.0 (November 2026)
 
 - Added a human second coder on the same 10-model subsample (`auditoria/segundo-codificador-humano/`).
