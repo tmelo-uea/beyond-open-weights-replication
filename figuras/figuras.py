@@ -21,7 +21,7 @@ RAIZ = Path(__file__).resolve().parents[1]
 SAIDA = Path(__file__).parent
 TINTA, TINTA2, GRADE = "#0b0b0b", "#52514e", "#d9d8d4"
 SLOT = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
-plt.rcParams.update({"font.family": "Arial", "font.size": 8, "pdf.fonttype": 42, "ps.fonttype": 42, "axes.edgecolor": GRADE,
+plt.rcParams.update({"font.family": ["Arial", "Liberation Sans", "DejaVu Sans"], "font.size": 8, "pdf.fonttype": 42, "ps.fonttype": 42, "axes.edgecolor": GRADE,
                      "axes.labelcolor": TINTA2, "xtick.color": TINTA2, "ytick.color": TINTA2})
 
 GRUPOS = [

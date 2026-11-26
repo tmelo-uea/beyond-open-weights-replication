@@ -78,6 +78,7 @@ Epoch AI data are used under CC BY 4.0. Azure traces are used under CC BY 4.0.
 - Added a human second coder on the same 10-model subsample (`auditoria/segundo-codificador-humano/`).
 - Gervásio-8B-PTPT R1 changed from A(i) to N(i) after adjudication (`auditoria/codificar.py`; matrix, notes, and Table S2 regenerated).
 - Fig. 2: owned-configuration lines are drawn only up to the measured reference capacity of one server (`figuras/figuras.py`).
+- Figures regenerated; `figuras.py` falls back to Liberation Sans (metric-compatible with Arial) when Arial is not installed.
 
 ### 1.0.0 (October 2026)
 
