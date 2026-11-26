@@ -22,7 +22,8 @@ or in the `fonte` fields of `cenarios/premissas.json`.
 | `auditoria/codificar.py` | Encodes all cells, applies inheritance, computes verdicts; writes `matriz-abertura-v1.csv` |
 | `auditoria/matriz-abertura-v1.csv` | Coded matrix (stratum, model, base, 13 criteria, OSAID, MOF class, notes) |
 | `auditoria/notas_en.csv` | Country of origin and English justification of key and interpretation-dependent (i) codes |
-| `auditoria/segundo-codificador/` | Reliability check: stratified subsample, instructions given to the second coder, its coding sheet and log, pre-adjudication matrix, agreement script and reports (κ = 0.82 before adjudication) |
+| `auditoria/segundo-codificador/` | Reliability check with an LLM-based second coder (OpenAI Codex): stratified subsample, instructions given to the second coder, its coding sheet and log, pre-adjudication matrix, agreement script and reports (κ = 0.82 before adjudication) |
+| `auditoria/segundo-codificador-humano/` | Reliability check with a human second coder on the same subsample: coding sheet and log, agreement reports (κ = 0.79 before adjudication; 0.85 without Soberano-1), repository check, adjudication table |
 | `auditoria/politicas_uso*.csv` | Binding test for use policies (Table S7) |
 | `compras/` | PNCP search results (raw JSON), screening script and table with original contract objects (Tables S9–S10) |
 | `fontes/MANIFESTO.csv`, `fontes/hf_revisoes_2026-10-24.csv` | SHA-256 hashes of local copies of all sources (copies not redistributed) and commit hashes of the Hugging Face repositories coded |
@@ -69,3 +70,15 @@ Code: MIT (`LICENSE`). Data and documentation: CC BY 4.0, with third-party mater
 ## Attribution
 
 Epoch AI data are used under CC BY 4.0. Azure traces are used under CC BY 4.0.
+
+## Changes
+
+### 1.1.0 (November 2026)
+
+- Added a human second coder on the same 10-model subsample (`auditoria/segundo-codificador-humano/`).
+- Gervásio-8B-PTPT R1 changed from A(i) to N(i) after adjudication (`auditoria/codificar.py`; matrix, notes, and Table S2 regenerated).
+- Fig. 2: owned-configuration lines are drawn only up to the measured reference capacity of one server (`figuras/figuras.py`).
+
+### 1.0.0 (October 2026)
+
+- Version described in the submitted article.

@@ -65,7 +65,7 @@ Codes after inheritance: A = meets; N = does not meet; ND = not disclosed; (i) =
 | 2 | Amazônia IA | N(i) | N(i) | ND | N | N | N | N | N | N | N | N | N | N | no | — | undeclared |
 | 2 | Curió-1.1b | ND | A | A(i) | A(i) | N(i) | N | N(i) | A | A | A | N | N | A | no | — | TinyLlama 1.1B (Singapore) |
 | 2 | GAIA-4B | N | A | N | N | N | N | N | A | A | N | N | N | A | no | — | Gemma 3 4B (US) |
-| 2 | Gervásio-8B-PTPT | N(i) | A | N(i) | N(i) | N | N | N | A | A | N | A(i) | N | A | no | — | Llama 3.1 8B Instruct (US) |
+| 2 | Gervásio-8B-PTPT | N(i) | A | N(i) | N(i) | N | N | N | A | A | N | N(i) | N | A | no | — | Llama 3.1 8B Instruct (US) |
 | 2 | Jurema-7B | N | N | N | N | N | N | N | A | A | N | N | N | A | no | — | Qwen2.5-7B-Instruct (China) |
 | 2 | LatamGPT-70B | N | A | N | N(i) | N | N | N | A | A | N | A | A(i) | A | no | — | Llama 3.1 70B (US) |
 | 2 | Manacá-1B | A | A | A | A | A(i) | A | A | A | A | N | A | A | A | yes | II | native |
@@ -117,7 +117,7 @@ Codes after inheritance: A = meets; N = does not meet; ND = not disclosed; (i) =
 | Amazônia IA | Brazil | (i) No repository or public weights; API access according to the press. No primary source available. |
 | Curió-1.1b | Brazil | Continued pre-training of TinyLlama 1.1B (Singapore). L1: no license declared (model and dataset). D1(i): "150B Portuguese tokens from the ClassiCC-PT corpus". P2: 50B and 100B checkpoints. R1: "Coming soon". |
 | GAIA-4B | Brazil | Derived from Gemma 3 4B (United States). L1: Gemma Terms of Use (prohibited-use policy). D1: "~13 billion tokens… Scientific Articles… Wikipedia", no source list. |
-| Gervásio-8B-PTPT | Portugal | Derived from Llama 3.1 8B Instruct (base_model metadata). L1(i): declares MIT, but the Llama 3.1 license applies to derivatives. R1(i): paper on an earlier version. |
+| Gervásio-8B-PTPT | Portugal | Derived from Llama 3.1 8B Instruct (base_model metadata). L1(i): declares MIT, but the Llama 3.1 license applies to derivatives. R1(i): the only paper (arXiv 2402.18766) describes an earlier release (Gervásio PT*, Llama 2); A(i) before, N(i) after adjudication with the human second coder (26 Nov. 2026). |
 | Jurema-7B | Brazil | Derived from Qwen2.5-7B-Instruct (China). L1: Apache-2.0 plus mandatory acceptance of "Acceptable Use Guidelines" (MOF §4.3). L2: access form. D1: "synthetically generated dataset…", no sources. |
 | LatamGPT-70B | Chile (regional consortium) | Derived from Llama 3.1 70B (United States). L1: Llama 3.1 Community License. D1: source list deferred to a "data catalog". D2(i): partially open corpus, behind a form, restricted for large firms. C2: repositories without LICENSE. R2(i): benchmarks and harness fork, without integrated tasks. |
 | Manacá-1B | Brazil | CC BY 4.0 (open permissive license). Source table (GigaVerbo, Ulysses Tesemõ, Portuguese Wikipedia); corpus pipeline, tokenizer, Megatron pre-training and benchmarks on GitHub. R1: arXiv 2608.30114. P2: not found. |
