@@ -21,7 +21,7 @@ RAIZ = Path(__file__).resolve().parents[1]
 SAIDA = Path(__file__).parent
 TINTA, TINTA2, GRADE = "#0b0b0b", "#52514e", "#d9d8d4"
 SLOT = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
-plt.rcParams.update({"font.family": "Arial", "font.size": 8, "pdf.fonttype": 42, "ps.fonttype": 42, "axes.edgecolor": GRADE,
+plt.rcParams.update({"font.family": ["Arial", "Liberation Sans", "DejaVu Sans"], "font.size": 8, "pdf.fonttype": 42, "ps.fonttype": 42, "axes.edgecolor": GRADE,
                      "axes.labelcolor": TINTA2, "xtick.color": TINTA2, "ytick.color": TINTA2})
 
 GRUPOS = [
@@ -111,11 +111,15 @@ def fig_cenarios70b():
     ic = p["infra_completa_tjms"]
     kwh2 = ic["servidores"] * 4 * p["servidores_proprios"]["potencia_gpu_w"]["valor"] * c.HORAS_MES / 1000 * p["pue"]["valor"]
     fixo_n1 = ic["valor_total_brl"] / ic["meses"] + kwh2 * p["tarifa_brl_kwh"]["valor"]
-    series.append(("Owned 4×H200 NVL server (TJMS), fixed", [fixo_srv] * len(vols), ":"))
-    series.append(("Full TJMS contract, 2 servers (N+1), fixed", [fixo_n1] * len(vols), ":"))
+    # Linhas próprias só até a capacidade de referência medida de um servidor (2 réplicas de 2 H100 SXM).
+    cap = 2 * c.tokens_mes(h100["tps_total"], p)
+    nan = float("nan")
+    series.append(("Owned 4×H200 NVL server (TJMS), fixed", [fixo_srv if v <= cap else nan for v in vols], ":"))
+    series.append(("Full TJMS contract, 2 servers (N+1), fixed", [fixo_n1 if v <= cap else nan for v in vols], ":"))
     fig, ax = plt.subplots(figsize=(3.5, 3.9))
     for k, (rot, ys, ls) in enumerate(series):
         ax.plot(vols, ys, ls, color=(TINTA if "N+1" in rot else SLOT[k]), linewidth=1.6, label=rot)
+    ax.axvline(cap, color=TINTA2, linewidth=0.8, linestyle="-.", label="Measured reference capacity, one server")
     ax.set_xscale("log")
     ax.set_yscale("log")
     ax.set_xlabel("Tokens per month")
